@@ -1,46 +1,41 @@
 :root {
-	--background-color: black;
+	--background-color: rgba(0, 0, 0, 0.9);
 	--primary-color: white;
-	--nice-color: #f9550380;
+	--branding-color: #f9550380;
 }
 
 body {
 	color: var(--primary-color);
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: var(--background-color);
 	font-family: "Roboto", sans-serif;
 	min-height: 100vh;
 	position: relative;
-	margin: 0;
 	display: flex;
 	flex-direction: column;
-}
-
-nav li {
-	display: inline;
-	margin-right: 30px;
-	line-height: 50px;
-}
-
-nav a {
-	color: var(--primary-color);
-	font-size: medium;
-	text-decoration: none;
-}
-
-nav a:hover {
-	color: var(--nice-color);
-}
-
-nav img {
-	max-width: 70px;
-	border-radius: 40px;
-	border: 2px solid var(--nice-color);
-	margin: 5px;
 }
 
 nav {
 	display: flex;
 	justify-content: space-between;
+}
+nav img {
+	max-width: 70px;
+	border-radius: 40px;
+	border: 2px solid var(--branding-color);
+	margin: 5px;
+}
+nav li {
+	display: inline;
+	margin-right: 30px;
+	line-height: 50px;
+}
+nav a {
+	color: var(--primary-color);
+	font-size: medium;
+	text-decoration: none;
+}
+nav a:hover {
+	color: var(--branding-color);
 }
 
 .container {
@@ -57,15 +52,6 @@ header {
 	height: 500px;
 	padding: 50px;
 }
-
-.drinks-header {
-	background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/523/original/line-of-cocktails.png?1732646272");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 500px;
-	padding: 50px;
-}
-
 header a {
 	color: var(--primary-color);
 	opacity: 0.6;
@@ -75,15 +61,34 @@ header a {
 	transition: opacity 200ms ease-in-out;
 }
 
-a:hover {
-	opacity: 0.7;
-}
-
 h1 {
 	color: var(--primary-color);
 	opacity: 0.7;
 	font-size: 100px;
 	margin-top: 0;
+}
+h2 {
+	font-size: 50px;
+	padding: 10px;
+	border-radius: 4px;
+	background-image: linear-gradient(
+		to right,
+		var(--branding-color) 0%,
+		transparent 40%
+	);
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 20px;
+	margin-bottom: 3px;
+}
+
+a:hover {
+	opacity: 0.7;
 }
 
 .equipment {
@@ -103,26 +108,12 @@ main img {
 	border: solid 3px rgba(249, 85, 3, 0.3);
 }
 
-h2 {
-	font-size: 50px;
-	padding: 10px;
-	border-radius: 4px;
-	background-image: linear-gradient(to right, #f9550380 0%, transparent 40%);
-}
-
-h3 {
-	font-size: 25px;
-}
-
-h4 {
-	font-size: 20px;
-	margin-bottom: 3px;
-}
-
-.recipe-container img {
-	float: right;
-	width: 250px;
-	border-radius: 4px;
+.drinks-header {
+	background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/523/original/line-of-cocktails.png?1732646272");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	padding: 50px;
 }
 
 .drinks-container {
@@ -141,14 +132,20 @@ h4 {
 	font-size: 25px;
 	font-weight: 900;
 	padding: 20px 40px;
-	border: solid 2px var(--nice-color);
+	border: solid 2px var(--branding-color);
 	border-radius: 5px;
+}
+
+.recipe-container img {
+	float: right;
+	width: 250px;
+	border-radius: 4px;
 }
 
 footer {
 	margin-top: auto;
 	text-align: left;
-	border-top: solid 2px var(--nice-color);
+	border-top: solid 2px var(--branding-color);
 	width: 100%;
 	padding: 20px 5px;
 	opacity: 0.5;
@@ -190,7 +187,7 @@ footer a {
 		font-size: 30px;
 		background-image: linear-gradient(
 			to right,
-			rgba(249, 85, 3, 0.3) 0%,
+			var(--branding-color) 0%,
 			transparent 90%
 		);
 	}
