@@ -1,7 +1,7 @@
 :root {
 	--background-color: black;
 	--primary-color: white;
-	--nice-color: #f95503;
+	--nice-color: #f9550380;
 }
 
 body {
@@ -11,10 +11,41 @@ body {
 	min-height: 100vh;
 	position: relative;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+nav li {
+	display: inline;
+	margin-right: 30px;
+	line-height: 50px;
+}
+
+nav a {
+	color: var(--primary-color);
+	font-size: medium;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--nice-color);
+}
+
+nav img {
+	max-width: 70px;
+	border-radius: 40px;
+	border: 2px solid var(--nice-color);
+	margin: 5px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
 }
 
 .container {
 	max-width: 60%;
+	margin-bottom: 30px;
 	display: block;
 	margin: 0 auto;
 }
@@ -27,7 +58,15 @@ header {
 	padding: 50px;
 }
 
-a {
+.drinks-header {
+	background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/523/original/line-of-cocktails.png?1732646272");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	padding: 50px;
+}
+
+header a {
 	color: var(--primary-color);
 	opacity: 0.6;
 	text-align: center;
@@ -40,14 +79,11 @@ a:hover {
 	opacity: 0.7;
 }
 
-.home {
-	font-size: 20px;
-}
-
 h1 {
 	color: var(--primary-color);
 	opacity: 0.7;
 	font-size: 100px;
+	margin-top: 0;
 }
 
 .equipment {
@@ -71,11 +107,7 @@ h2 {
 	font-size: 50px;
 	padding: 10px;
 	border-radius: 4px;
-	background-image: linear-gradient(
-		to right,
-		rgba(249, 85, 3, 0.3) 0%,
-		transparent 40%
-	);
+	background-image: linear-gradient(to right, #f9550380 0%, transparent 40%);
 }
 
 h3 {
@@ -93,15 +125,33 @@ h4 {
 	border-radius: 4px;
 }
 
+.drinks-container {
+	margin-bottom: 60px;
+}
+
+.drinks-container li {
+	text-decoration: none;
+	list-style: none;
+	margin-top: 60px;
+}
+
+.drinks-container a {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: 900;
+	padding: 20px 40px;
+	border: solid 2px var(--nice-color);
+	border-radius: 5px;
+}
+
 footer {
-	position: relative;
-	bottom: 5px;
+	margin-top: auto;
 	text-align: left;
 	border-top: solid 2px var(--nice-color);
 	width: 100%;
 	padding: 20px 5px;
 	opacity: 0.5;
-	margin-top: 20px;
 }
 
 footer a {
@@ -109,13 +159,23 @@ footer a {
 }
 
 @media (max-width: 750px) {
+	nav a {
+		font-size: small;
+	}
+
 	.container {
 		max-width: 90%;
 	}
 
 	header {
 		background-size: cover;
-		height: auto;
+		height: 150px;
+	}
+
+	.drinks-header {
+		background-size: cover;
+		height: 150px;
+		padding-top: 5px;
 	}
 
 	h1 {
