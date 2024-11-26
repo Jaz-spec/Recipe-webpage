@@ -156,6 +156,10 @@ footer a {
 }
 
 @media (max-width: 750px) {
+	nav li {
+		margin-right: 10px;
+	}
+
 	nav a {
 		font-size: small;
 	}
